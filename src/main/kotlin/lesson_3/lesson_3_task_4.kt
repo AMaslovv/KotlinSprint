@@ -19,10 +19,3 @@ fun main() {
     statChessSend = "$startPosChess-$finalPosChess;$currentMove"
     println(statChessSend)
 }
-
-
-
-
-
-
-
