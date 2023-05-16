@@ -15,5 +15,5 @@ fun main() {
     val seasonsNow = "зима"
 
     //проверяем совпадают ли условия и пишем в консоль
-    println("Благоприятные ли условия сейчас для роста бобовых? ${(weatherToday == WEATHER_FOR_BEANS) && (statTentToday == STATUS_TENT) && (humidityToday == HUMIDITY_PERCENT) && (seasonsNow == SEASONS)}")
+    print("Благоприятные ли условия сейчас для роста бобовых? ${(weatherToday == WEATHER_FOR_BEANS) && (statTentToday == STATUS_TENT) && (humidityToday == HUMIDITY_PERCENT) && (seasonsNow == SEASONS)}")
 }
