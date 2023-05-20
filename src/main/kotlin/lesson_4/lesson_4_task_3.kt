@@ -2,18 +2,21 @@ package lesson_4
 
 /** by AMaslov  */
 
-const val WEATHER_FOR_BEANS = "солнечная погода"
-const val STATUS_TENT = "тент раскрыт"
-const val HUMIDITY_PERCENT = "влажность 20"
-const val SEASONS = "не зима"
+const val WEATHER_FOR_BEANS = "солнечно"
+const val IS_TENT_OPEN = true
+const val HUMIDITY_FOR_BEANS = 20
+const val SEASON_FOR_BEANS = "зима"
 
 fun main() {
     //инициализация переменных
-    val weatherToday = "солнечная погода"
-    val statTentToday = "тент раскрыт"
-    val humidityToday = "влажность 20"
-    val seasonsNow = "зима"
+    val weatherToday = "солнечно"
+    val isTentOpen = true
+    val humidityToday = 20
+    val seasonNow = "зима"
 
     //проверяем совпадают ли условия и пишем в консоль
-    print("Благоприятные ли условия сейчас для роста бобовых? ${(weatherToday == WEATHER_FOR_BEANS) && (statTentToday == STATUS_TENT) && (humidityToday == HUMIDITY_PERCENT) && (seasonsNow == SEASONS)}")
+    print("Благоприятные ли условия сейчас для роста бобовых? ${(weatherToday == WEATHER_FOR_BEANS) && 
+                                                                (isTentOpen == IS_TENT_OPEN) && 
+                                                                (humidityToday == HUMIDITY_FOR_BEANS) && 
+                                                                (seasonNow != SEASON_FOR_BEANS)}")
 }
