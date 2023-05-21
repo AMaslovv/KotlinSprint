@@ -21,7 +21,7 @@ fun main() {
 
     //проверка условий и вывод
     print("Может ли корабль отправляться в плавание? ${((provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged == IS_SHIP_DAMAGED) && 
-            ((isWeatherGood == IS_WEATHER_GOOD) or (isWeatherGood != IS_WEATHER_GOOD)) && ((crewCount >= MIN_CREW_COUNT) and (crewCount < RECOMEND_CREW_COUNT)) ||
-            (provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged != IS_SHIP_DAMAGED) && (isWeatherGood == IS_WEATHER_GOOD) && (crewCount == RECOMEND_CREW_COUNT))
-    }")
+            ((isWeatherGood == IS_WEATHER_GOOD) or (isWeatherGood != IS_WEATHER_GOOD)) && ((crewCount >= MIN_CREW_COUNT) and 
+            (crewCount < RECOMEND_CREW_COUNT)) || (provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged != IS_SHIP_DAMAGED) &&
+            (isWeatherGood == IS_WEATHER_GOOD) && (crewCount == RECOMEND_CREW_COUNT))}")
 }
