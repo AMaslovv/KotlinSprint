@@ -12,10 +12,10 @@ fun main() {
     //вывод в консоль условий авторизации и считывание данных
     println("Для успешной авторизации необходимо решить пример:")
     println("$firstSum + $secondSum = ")
-    val userAnswer = readln() ?: ""
+    val userAnswer = readln()
 
     //проверка введеных данных на правильность
-    if (userAnswer != ""){
+    if (userAnswer.isNotEmpty()) {
         if (firstSum + secondSum == userAnswer.toInt()) println(greetings)
             else println(wrongAnswer)
     }
