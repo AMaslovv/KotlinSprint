@@ -11,17 +11,21 @@ const val RECOMEND_CREW_COUNT = 70 // <70
 fun main() {
     //инициализация переменных и ввод данных с консоли
     println("Имеются ли повреждения корпуса?")
-    val isShipDamaged = readln()!!.toBoolean()
+    val isShipDamaged = readln().toBoolean()
     println("Благоприятная погода?")
-    val isWeatherGood = readln()!!.toBoolean()
+    val isWeatherGood = readln().toBoolean()
     println("Введите количество ящиков провизии:")
-    val provisionQuantity = readln()!!.toInt()
+    val provisionQuantity = readln().toInt()
     println("Укажите численность экипажа:")
-    val crewCount = readln()!!.toInt()
+    val crewCount = readln().toInt()
 
     //проверка условий и вывод
-    print("Может ли корабль отправляться в плавание? ${((provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged == IS_SHIP_DAMAGED) && 
-            ((isWeatherGood == IS_WEATHER_GOOD) or (isWeatherGood != IS_WEATHER_GOOD)) && ((crewCount >= MIN_CREW_COUNT) and 
-            (crewCount < RECOMEND_CREW_COUNT)) || (provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged != IS_SHIP_DAMAGED) &&
-            (isWeatherGood == IS_WEATHER_GOOD) && (crewCount == RECOMEND_CREW_COUNT))}")
+    val firstShipCondition =
+        (provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged == IS_SHIP_DAMAGED) && ((isWeatherGood == IS_WEATHER_GOOD) or (isWeatherGood != IS_WEATHER_GOOD)) &&
+                ((crewCount >= MIN_CREW_COUNT) and (crewCount < RECOMEND_CREW_COUNT))
+
+    val secondShipCondition =
+        (provisionQuantity > PROVISION_QUANTITY) && (isShipDamaged != IS_SHIP_DAMAGED) && (isWeatherGood == IS_WEATHER_GOOD) && (crewCount == RECOMEND_CREW_COUNT)
+
+    print("Может ли корабль отправляться в плавание? ${firstShipCondition || secondShipCondition}")
 }
