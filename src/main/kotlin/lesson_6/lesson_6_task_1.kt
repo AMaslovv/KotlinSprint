@@ -1,5 +1,6 @@
 package lesson_6
 
+
 /** by AMaslov  */
 
 fun main() {
