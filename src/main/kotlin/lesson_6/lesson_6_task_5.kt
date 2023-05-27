@@ -11,17 +11,17 @@ fun main() {
     //вывод в консоль условий авторизации и считывание данных
     println("Для успешной авторизации необходимо решить пример:")
 
-    while (tryCount > 0){
+    while (tryCount > 0) {
         println("У Вас попыток: $tryCount\n")
         val firstSum = (1..9).random()
         val secondSum = (1..9).random()
-        println("$firstSum + $secondSum = ")
+        print("$firstSum + $secondSum = ")
         val userAnswer = readln().toInt()
-        if (userAnswer == (firstSum + secondSum)){
+        if (userAnswer == (firstSum + secondSum)) {
             println(greetings)
             break
         }
-     tryCount--
+        tryCount--
     }
     if (tryCount == 0) println(wrongAnswer)
 }
