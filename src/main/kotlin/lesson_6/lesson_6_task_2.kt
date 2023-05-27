@@ -4,16 +4,13 @@ package lesson_6
 
 fun main() {
     //переменная для количества секунд
-    var timerSec = 0
+    val timerSec: Long
 
     println("Это приложение-таймер.\n")
     println("Введите количество секунд для отсчета:")
-    timerSec = readln().toInt()
 
-    //цикл
-    repeat (timerSec) {
-
-        Thread.sleep(1_000)
-    }
+    //считываем количество секунд и переводим в миллисекунды и спим
+    timerSec = readln().toLong()
+    Thread.sleep(timerSec * 1000)
     println("Прошло $timerSec секунд.")
 }
