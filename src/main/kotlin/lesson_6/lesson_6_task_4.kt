@@ -7,20 +7,19 @@ fun main() {
     var tryCount = 5
     val hiddenNumber = (1..9).random()
 
-    println("Здравствуйте! Вас приветствует игра Угадайка!")
-    println("У Вас $tryCount попыток чтобы отгадать загаданное число от 1 до 9:\n")
+    println("Здравствуйте!\nВас приветствует игра Угадайка!")
+    println("У Вас $tryCount попыток чтобы отгадать загаданное число от 1 до 9:")
 
     //считываем ответ и проверяем в цикле
     do {
         val answerUser = readln().toInt()
-        if (hiddenNumber == answerUser){
+        if (hiddenNumber == answerUser) {
             println("Это была великолепная игра!")
             break
-        }
-        else {
+        } else {
             tryCount--
-            println("Неверно! Остолось попыток: $tryCount")
+            println("Неверно! Осталось попыток: $tryCount")
         }
-    }while (tryCount > 0)
-    println("Было загадано число: $hiddenNumber")
+    } while (tryCount > 0)
+    if (tryCount == 0) println("Было загадано число: $hiddenNumber")
 }
