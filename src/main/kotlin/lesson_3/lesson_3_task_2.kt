@@ -12,6 +12,6 @@ fun main() {
     val lastNameMarried = "Сидорова"
 
     //Выводим в консоль данные до замужества и после
-    println("$lastName $firstName $patrName,$ageBeforeMarried")
-    println("$lastNameMarried $firstName $patrName,$ageMarried")
+    println("$lastName $firstName $patrName, $ageBeforeMarried")
+    println("$lastNameMarried $firstName $patrName, $ageMarried")
 }
